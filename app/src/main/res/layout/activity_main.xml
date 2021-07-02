@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFA3AF"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_info_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_main">
+
+        <TextView
+            android:id="@+id/info_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="15dp"
+            android:text="@string/info"
+            android:textColor="#00AF54"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linear_info_main"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="15dp"
+            android:text="Enigma Machine"
+            android:textColor="#007CBE"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/encrypt_main"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50sp"
+            android:layout_marginVertical="10sp"
+            android:onClick="goToEncrypt"
+            android:text="Encrypt"
+            android:textColor="#007CBE"
+            android:textStyle="bold"
+            app:backgroundTint="#FFD639" />
+
+        <Button
+            android:id="@+id/decrypt_main"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50sp"
+            android:layout_marginVertical="10sp"
+            android:onClick="goToDencrypt"
+            android:text="Decrypt"
+            android:textColor="#007CBE"
+            android:textColorHighlight="#007CBE"
+            android:textStyle="bold"
+            app:backgroundTint="#FFD639" />
+
+        <Button
+            android:id="@+id/configure_main"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50sp"
+            android:layout_marginVertical="10sp"
+            android:onClick="goToConfigure"
+            android:text="configure"
+            android:textColor="#007CBE"
+            android:textStyle="bold"
+            app:backgroundTint="#FFD639" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
